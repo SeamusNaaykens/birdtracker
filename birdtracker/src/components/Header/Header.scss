@@ -1,0 +1,25 @@
+@use '../../styles/partials/font' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.header {
+    font-family: 'Headings';
+    background-color: $darkest-green;
+
+    &__container {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        padding: 1.5rem 3rem 1.5rem 3rem;
+    }
+
+    &__title {
+        font-size: 3rem;
+        color: $grey;
+    }
+
+    &__logo {
+        height: 6rem;
+    }
+
+}
