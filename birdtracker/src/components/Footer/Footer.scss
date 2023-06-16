@@ -1,0 +1,39 @@
+@use '../../styles/partials/font' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.footer {
+    font-family: "Headings";
+    background-color: $darkest-green;
+    margin-top: 5rem;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 3rem 1.5rem 3rem;
+        align-content: center;
+    }
+
+    &__title {
+        font-size: 2rem;
+        color: $grey;
+        margin-bottom: 1rem;
+    }
+
+    &__copyright {
+        color: $grey;
+        font-size: .75rem;
+        align-self: center;
+    }
+
+    &__social-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+
+    &__icon {
+        width: 2rem;
+    }
+}
