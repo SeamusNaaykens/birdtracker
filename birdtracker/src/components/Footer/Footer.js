@@ -2,12 +2,16 @@ import './Footer.scss'
 import facebook from '../../assets/icons/icons8-facebook-100.png'
 import instagram from '../../assets/icons/icons8-instagram-100.png'
 import twitter from '../../assets/icons/icons8-twitter-100.png'
+import logo from '../../assets/images/BirdTracker-Logo.png'
 
 function Footer() {
     return(
         <footer className='footer'>
             <div className='footer__container'>
+                <div className='footer__logo-container'>
                 <h4 className='footer__title'>BirdTracker</h4>
+                <img src={logo} alt='BirdTracker logo' className='footer__logo'/>
+                </div>
                 <p className='footer__copyright'>Copyright Seamus Naaykens Designs</p>
                 <div className='footer__subcontainer'>
                     <h4 className='footer__title'> Socials</h4>

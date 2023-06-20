@@ -13,16 +13,26 @@
         align-content: center;
     }
 
+    &__logo-container {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__title {
         font-size: 2rem;
         color: $grey;
         margin-bottom: 1rem;
     }
 
+    &__logo {
+        width: 4rem;
+        align-self: center;
+    }
+
     &__copyright {
         color: $grey;
         font-size: .75rem;
-        align-self: center;
+        align-self: flex-end;
     }
 
     &__social-container {

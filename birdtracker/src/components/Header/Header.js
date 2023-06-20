@@ -1,5 +1,5 @@
 import './Header.scss'
-import logo from '../../assets/images/birdtracker-starter-logo.png'
+import logo from '../../assets/images/BirdTracker-Logo.png'
 import login from '../../assets/icons/icons8-login-100.png'
 
 function Header() {
