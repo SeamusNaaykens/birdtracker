@@ -1,0 +1,89 @@
+@use '../../styles/partials/font' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.birdtracker {
+    font-family: "Headings";
+    background-color: $light-green;
+
+    &__container {
+        display: flex;
+        align-content: center;
+        background-image: url('../../assets/images/feather_wallpaper.png');
+        background-size: 50rem;
+        background-position-y: -.75rem;
+        border: 1px solid $mid-green;
+        transition: background-color .5s ease-out 100ms;
+    }
+
+    &__container:hover {
+        background-color: $mid-green;
+    }
+
+    &__icon-bar {
+        height: 7.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $darkest-green;
+        padding: 0rem 3rem 0rem 3rem;
+        position: relative;
+
+    }
+
+    &__add__icon {
+        height: 2.5rem;
+        margin-right: 2rem;
+        // position: absolute;
+        // right: 100%;
+        // animation-name: bounce;
+        // animation-duration: 0.5s;
+        // animation-direction: alternate;
+        // animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+        // animation-iteration-count: infinite;
+    }
+
+    @keyframes bounce {
+        from { 
+          transform: translateY(0) scale(1);
+        }
+        to   { 
+          transform: translateY(var(--drop-height)) scale(1, 0.7);
+        }
+      }
+
+    &__search-bar {
+        height: 2.5rem;
+        border-radius: 1.25rem;
+        padding-left: 1rem;
+        width: 15%;
+        background-color: $grey;
+        border: 2px solid $light-green;
+        font-family: 'Copy';
+        font-size: 1rem;
+        color: $darkest-green;
+    }
+
+    &__image {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    &__subcontainer {
+        align-self: center;
+    }
+
+    &__heading {
+        color: $darkest-green;
+        margin-left: 3rem;
+        font-size: 5rem;
+    }
+
+    &__scientific__name {
+        color: $darkest-green;
+        margin-left: 3rem;
+        font-size: 1.5rem;
+        font-family: "Copy";
+        font-style: italic;
+    }
+}
