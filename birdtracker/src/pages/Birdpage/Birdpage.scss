@@ -1,0 +1,152 @@
+@use '../../styles/partials/font' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.birdpage {
+    background-image: url('../../assets//images/feather_wallpaper.png');
+    background-color: $light-green;
+    padding: 2rem;
+
+
+    &__wrapper {
+        display: flex;
+        border-bottom: 2px solid $dark-green;
+        margin-bottom: 5rem;
+
+    }
+
+    &__image__wrapper {
+        margin-right: 3rem;
+    }
+
+    &__image {
+        height: 40rem;
+        border-radius: 1.25rem;
+        box-shadow: 5px 10px 10px $dark-green;
+        margin-bottom: 2rem;
+    }
+
+    &__icon__wrapper {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgba($color: #3a5a40, $alpha: .5);
+        padding: 1rem;
+        margin-bottom: 2rem;
+        border-radius: 1.25rem;
+        box-shadow: 5px 10px 10px $dark-green;
+        transition: background-color .5s ease-out 100ms;
+    }
+
+    &__icon__wrapper:hover {
+        background-color: $darkest-green;
+    }
+
+    &__icon__container {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    
+    &__icon-title {
+        font-family: "Headings";
+        color: $grey;
+        font-size: 1.5rem;
+    }
+
+    &__identifier-icon {
+        height: 3rem;
+    }
+
+    &__container--main {
+        justify-self: center;
+        width: 60rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    &__subcontainer {
+        margin-bottom: 6rem;
+    }
+
+    &__title {
+        font-family: "Headings";
+        color: $grey;
+        font-size: 6rem;
+    }
+
+    &__scientific {
+        color: $grey;
+        font-family: "Copy";
+        font-size: 2rem;
+        text-align: center;
+
+    }
+
+    &__heading {
+        font-family: "Headings";
+        color: $grey;
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__sightings__container {
+        background-color: rgba($color: #3a5a40, $alpha: .5);
+        padding: 2rem;
+        border-radius: 1.25rem;
+        box-shadow: 5px 10px 10px $dark-green;
+        width: 100%;
+        transition: background-color .5s ease-out 100ms;
+    }
+
+    &__sightings__container:hover {
+        background-color: $darkest-green;
+    }
+
+    &__sightings__input {
+        margin-bottom: .5rem;
+        border-radius: 1.25rem;
+        border: 2px solid $light-green;
+        height: 4rem;
+        width: 100%;
+        padding-left: 1rem;
+        font-family: 'Copy';
+        background-color: $grey;
+    }
+
+    &__button {
+        margin-bottom: 2rem;
+        background-color: $darkest-green;
+        font-family: "Headings";
+        color: $grey;
+        font-size: 2rem;
+        width: 8rem;
+        border: 2px solid $light-green;
+        border-radius: 1.875rem;
+        padding: .5rem 0rem .5rem 0rem;
+    }
+
+    &__sightings__subcontainer {
+        display: flex;
+        margin-bottom: 1rem;
+
+    }
+
+    &__content {
+        margin-right: 1rem;
+        font-family: 'Copy';
+        color: $grey;
+    }
+
+    &__content--date {
+        font-family: 'Copy';
+        color: $grey;
+    }
+
+    &__section {
+        border-bottom: 2px solid $dark-green;
+        margin-bottom: 5rem;
+    }
+}
