@@ -3,8 +3,14 @@ import snipe from '../../assets/images/snipe.jpg'
 import waterIcon from '../../assets/icons/icons8-water-48.png'
 import bugIcon from '../../assets/icons/icons8-bug-50.png'
 import groundNester from '../../assets/images/ground-nester.png'
+import { Collapse, useDisclosure, Box } from '@chakra-ui/react'
 
 function Birdpage() {
+    const { isOpen, onToggle } = useDisclosure(false)
+    const { isOpen: isOpen2, onToggle: onToggle2 } = useDisclosure(false)
+    const { isOpen: isOpen3, onToggle: onToggle3 } = useDisclosure(false)
+
+
     return (
         <div className='birdpage'>
             <div className='birdpage__wrapper'>
@@ -51,14 +57,47 @@ function Birdpage() {
                     </div>
                 </div>
             </div>
-            <div className='birdpage__section'>
+            <div className='birdpage__section' onClick={onToggle}>
                 <h3 className='birdpage__heading'>Classification</h3>
+                <Collapse in={isOpen} animateOpacity>
+                    <Box
+                        margin='2rem' p='3rem' background='#3a5a40' borderRadius='1.25rem' boxShadow='5px 10px 10px #344e41'>
+                        <Box textAlign='center' marginBottom='1rem'>
+                            <h4 className='birdpage__subheading'>Here is a classification</h4>
+                        </Box>
+                        <Box>
+                            <p className='birdpage__content'>Here is some new content</p>
+                        </Box>
+                    </Box>
+                </Collapse>
             </div>
-            <div className='birdpage__section'>
+            <div className='birdpage__section' onClick={onToggle2}>
                 <h3 className='birdpage__heading'>Habitat</h3>
+                <Collapse in={isOpen2} animateOpacity>
+                    <Box
+                        margin='2rem' p='3rem' background='#3a5a40' borderRadius='1.25rem' boxShadow='5px 10px 10px #344e41'>
+                        <Box textAlign='center' marginBottom='1rem'>
+                            <h4 className='birdpage__subheading'>Here is a classification</h4>
+                        </Box>
+                        <Box>
+                            <p className='birdpage__content'>Here is some new content</p>
+                        </Box>
+                    </Box>
+                </Collapse>
             </div>
-            <div className='birdpage__section'>
+            <div className='birdpage__section' onClick={onToggle3}>
                 <h3 className='birdpage__heading'>Behaviour</h3>
+                <Collapse in={isOpen3} animateOpacity>
+                    <Box
+                        margin='2rem' p='3rem' background='#3a5a40' borderRadius='1.25rem' boxShadow='5px 10px 10px #344e41'>
+                        <Box textAlign='center' marginBottom='1rem'>
+                            <h4 className='birdpage__subheading'>Here is a classification</h4>
+                        </Box>
+                        <Box>
+                            <p className='birdpage__content'>Here is some new content</p>
+                        </Box>
+                    </Box>
+                </Collapse>
             </div>
         </div>
     )

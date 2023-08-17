@@ -5,7 +5,29 @@
 .homepage {
     background-color: $light-green;
     font-family: "Headings";
-    display: flex;
+    
+    &__description {
+        padding: 3rem 8rem 3rem 8rem;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 5rem;
+        color: $darkest-green;
+        margin-bottom: 1rem;
+    }
+
+    &__description--content {
+        font-size: 1.5rem;
+        color: $darkest-green;
+        font-family: 'Copy';
+        line-height: 2rem;
+    }
+
+
+    &__content {
+        display: flex;
+    }
 
     &__wrapper {
         width: 30%;

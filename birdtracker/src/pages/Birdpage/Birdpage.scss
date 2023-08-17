@@ -149,4 +149,10 @@
         border-bottom: 2px solid $dark-green;
         margin-bottom: 5rem;
     }
+
+    &__subheading {
+        font-family: 'Headings';
+        color: $grey;
+        font-size: 2rem;
+    }
 }

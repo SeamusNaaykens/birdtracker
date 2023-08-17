@@ -25,9 +25,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: $darkest-green;
+        background-color: $light-green;
         padding: 0rem 3rem 0rem 3rem;
         position: relative;
+        border-top: 1px solid $mid-green ;
 
     }
 
@@ -41,6 +42,11 @@
         // animation-direction: alternate;
         // animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
         // animation-iteration-count: infinite;
+    }
+
+    &__add__icon--description {
+        font-family: "Copy";
+        color: $grey;
     }
 
     @keyframes bounce {
@@ -62,6 +68,11 @@
         font-family: 'Copy';
         font-size: 1rem;
         color: $darkest-green;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
     }
 
     &__image {
