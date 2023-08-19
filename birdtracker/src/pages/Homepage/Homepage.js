@@ -11,7 +11,7 @@ function Homepage() {
         <main className='homepage'>
             <div className='homepage__description'>
                 <h1 className='homepage__title'>Welcome to BirdTracker!</h1>
-                <p className='homepage__description--content'>This application has been designed to document your experiences and sightings out in the field. Inspired by the excellent apps created by Cornell University, BirdTracker aims to be both a informative resource and a personlized digital journal of your highlights out in the field. Start exploring by creating an account above and clicking on the main application features below. Happy birding! </p>
+                <p className='homepage__description--content'>This application has been designed to document your experiences and sightings out in the field. Inspired by the excellent apps created by Cornell University, BirdTracker aims to be both an informative resource and a personlized digital journal of your highlights out in the field. Start exploring by creating an account above and clicking on the main application features below. Happy birding! </p>
             </div>
             <div className='homepage__content'>
                 <div className='homepage__wrapper'>
@@ -21,10 +21,12 @@ function Homepage() {
                             <h2 className='homepage__heading'>BirdTracker</h2>
                         </div>
                     </Link>
-                    <div className='homepage__container'>
-                        <img src={bucket} alt='bucketlist icon' className='homepage__icon' />
-                        <h2 className='homepage__heading'>Bucketlist</h2>
-                    </div>
+                    <Link to={'/bucketlist'} className='homepage__link'>
+                        <div className='homepage__container'>
+                            <img src={bucket} alt='bucketlist icon' className='homepage__icon' />
+                            <h2 className='homepage__heading'>Bucketlist</h2>
+                        </div>
+                    </Link>
                     <div className='homepage__container'>
                         <img src={goal} alt='achievements icon' className='homepage__icon' />
                         <h2 className='homepage__heading'>Achievements</h2>

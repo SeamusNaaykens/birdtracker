@@ -1,0 +1,43 @@
+@use '../../styles/partials/font' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+
+.bucketlist {
+    background-color: $light-green;
+    padding: 4rem 0rem 4rem 0rem;
+
+    &__intro-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4rem;
+    } 
+
+    &__title {
+        font-family: "Headings";
+        font-size: 3rem;
+        color: $dark-green;
+        margin: 0rem 0rem 1rem 0rem;
+        padding: 0;
+    }
+
+    &__description {
+        color: $dark-green;
+        font-family: 'Copy';
+    }
+
+    &__selector-container {
+        border-bottom: solid 1px $dark-green;
+        padding: 2rem;
+    }
+
+    &__bird {
+        margin-bottom: .25rem;
+    }
+
+    &__container {
+        background-image: url('../../assets/images/feather_wallpaper.png');
+        background-size: cover
+    }
+}
