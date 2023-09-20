@@ -28,6 +28,9 @@
     }
 
     &__selector-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         border-bottom: solid 1px $dark-green;
         padding: 2rem;
     }
