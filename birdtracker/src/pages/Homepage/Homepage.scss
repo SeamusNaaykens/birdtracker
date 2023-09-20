@@ -30,6 +30,7 @@
     }
 
     &__wrapper {
+        height: 100%;
         width: 30%;
         min-width: 30%;
     }
@@ -39,7 +40,7 @@
     }
 
     &__container {
-        height: 14.0625rem;
+        height: 20rem;
         padding: 3rem;
         border: 1px solid $mid-green;
         display: flex;
