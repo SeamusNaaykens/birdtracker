@@ -10,10 +10,10 @@ function Header() {
                 <Link to={'/'} className='header__link'>
                     <h1 className='header__title'>BirdTracker</h1>
                 </Link>
-                <div className='header__subcontainer'>
+                <Link to={'/login'} className='header__subcontainer'>
                     <img src={login} alt='login/signup icon' className='header__icon' />
                     <p className='header__link'>Login/Signup</p>
-                </div>
+                </Link>
                 <img src={logo} alt='BirdTracker logo' className='header__logo'></img>
             </div>
         </header>

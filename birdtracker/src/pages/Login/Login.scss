@@ -1,0 +1,64 @@
+@use '../../styles/partials/font' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.login {
+    background-color: $light-green;
+    background-image: url(../../assets/images/feather_wallpaper.png);
+    font-family: "Headings";
+    color: $darkest-green;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__subwrapper {
+        margin-right: 4rem;
+        padding: 2rem;
+    }
+
+    &__container {
+        margin-bottom: 2rem;
+        align-content: start;
+        
+    }
+
+    &__heading {
+        font-size: 3.5rem;
+    }
+
+    &__description {
+        font-size: 1.25rem;
+        font-family: 'Copy';
+        color: $grey
+    }
+
+    &__form {
+        margin-bottom: 4rem;
+        transition: background-color .5s ease-out 100ms;
+        padding: 2rem;
+        border-radius: 1.875rem;
+    }
+
+    &__form:hover {
+        background-color: $mid-green;
+    }
+
+    &__signup-description {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        font-family: 'Copy';
+    }
+}
+
+.signup__form {
+    transition: background-color .5s ease-out 100ms;
+    padding: 2rem;
+    border-radius: 1.875rem;
+}
+
+.signup__form:hover {
+    background-color: $mid-green;
+}
