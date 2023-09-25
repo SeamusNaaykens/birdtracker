@@ -1,14 +1,17 @@
 import './Login.scss'
 import Carousel from '../../components/Carousel/Carousel'
 import { birds } from '../../components/Data/Data'
+import { useState, useEffect } from 'react'
 import {
     Input,
+    InputGroup,
     FormControl,
     FormLabel,
     FormErrorMessage,
     Button,
     Collapse,
-    useDisclosure
+    useDisclosure,
+    InputRightElement,
 } from '@chakra-ui/react'
 
 
@@ -16,6 +19,9 @@ import {
 function Login() {
 
     const { isOpen, onToggle } = useDisclosure(false)
+    const [show, setShow] = useState(false)
+    const handleClick = () => setShow(!show)
+
 
     return (
         <main className='login'>
@@ -28,12 +34,21 @@ function Login() {
                     <form className='login__form'>
                         <FormControl marginBlockEnd='1rem' id="email">
                             <FormLabel marginBlockEnd='.5rem' fontSize='1.25rem'>Email address</FormLabel>
-                            <Input variant='outline' height='3rem' width='20rem' paddingLeft='.5rem' borderRadius='5px' type="email" placeholder='We will never share your email' fontFamily='Copy' fontSize='.75rem' background='#dad7cd' border='1px solid #344e41' />
+                            <Input variant='outline' height='3rem' width='22.5rem' paddingLeft='.5rem' borderRadius='5px' type="email" placeholder='We will never share your email' fontFamily='Copy' fontSize='.75rem' background='#dad7cd' border='1px solid #344e41' />
                         </FormControl>
+
                         <FormControl marginBlockEnd='1rem' id="password">
                             <FormLabel marginBlockEnd='.5rem' fontSize='1.25rem'>Password</FormLabel>
-                            <Input variant='outline' height='3rem' width='20rem' paddingLeft='.5rem' borderRadius='5px' fontFamily='Copy' fontSize='.75rem' background='#dad7cd' border='1px solid #344e41' type="password" />
+                            <InputGroup>
+                                <Input variant='outline' height='3rem' width='22.5rem' paddingLeft='.5rem' borderRadius='5px' fontFamily='Copy' fontSize='.75rem' background='#dad7cd' border='1px solid #344e41' type={show ? 'text' : 'password'} />
+                                <InputRightElement width='5rem'>
+                                    <Button h='3rem' width='3rem' borderRadiusRight='5px' fontFamily='Headings' fontSize='1rem' color='#dad7cd' border='none' background='#3a5a40' onClick={handleClick}>
+                                        {show ? 'Hide' : 'Show'}
+                                    </Button>
+                                </InputRightElement>
+                            </InputGroup>
                         </FormControl>
+
                         <Button height='2rem' width='6rem' borderRadius='30px' fontFamily='Headings' fontSize='1.25rem' border='none' background='#3a5a40' color='#dad7cd'>Login</Button>
                     </form>
                     <div>
@@ -43,15 +58,22 @@ function Login() {
                             <form className='signup__form'>
                                 <FormControl marginBlockEnd='1rem' id="username__signup">
                                     <FormLabel marginBlockEnd='.5rem' fontSize='1.25rem'>Username</FormLabel>
-                                    <Input variant='outline' height='3rem' width='20rem' paddingLeft='.5rem' borderRadius='5px' fontFamily='Copy' fontSize='.75rem' background='#dad7cd' border='1px solid #344e41' type="name" ></Input>
+                                    <Input variant='outline' height='3rem' width='22.5rem' paddingLeft='.5rem' borderRadius='5px' fontFamily='Copy' fontSize='.75rem' background='#dad7cd' border='1px solid #344e41' type="name" ></Input>
                                 </FormControl>
                                 <FormControl marginBlockEnd='1rem' id="email__signup">
                                     <FormLabel marginBlockEnd='.5rem' fontSize='1.25rem'>Email address</FormLabel>
-                                    <Input variant='outline' height='3rem' width='20rem' paddingLeft='.5rem' borderRadius='5px' type="email" placeholder='We will never share your email' fontFamily='Copy' fontSize='.75rem' background='#dad7cd' border='1px solid #344e41'></Input>
+                                    <Input variant='outline' height='3rem' width='22.5rem' paddingLeft='.5rem' borderRadius='5px' type="email" placeholder='We will never share your email' fontFamily='Copy' fontSize='.75rem' background='#dad7cd' border='1px solid #344e41'></Input>
                                 </FormControl>
                                 <FormControl marginBlockEnd='1rem' id="password__signup">
                                     <FormLabel marginBlockEnd='.5rem' fontSize='1.25rem'>Password</FormLabel>
-                                    <Input variant='outline' height='3rem' width='20rem' paddingLeft='.5rem' borderRadius='5px' fontFamily='Copy' fontSize='.75rem' background='#dad7cd' border='1px solid #344e41' type="password" ></Input>
+                                    <InputGroup>
+                                        <Input variant='outline' height='3rem' width='22.5rem' paddingLeft='.5rem' borderRadius='5px' fontFamily='Copy' fontSize='.75rem' background='#dad7cd' border='1px solid #344e41' type={show ? 'text' : 'password'} />
+                                        <InputRightElement width='5rem'>
+                                            <Button h='3rem' width='3rem' borderRadiusRight='5px' fontFamily='Headings' fontSize='1rem' color='#dad7cd' border='none' background='#3a5a40' onClick={handleClick}>
+                                                {show ? 'Hide' : 'Show'}
+                                            </Button>
+                                        </InputRightElement>
+                                    </InputGroup>
                                 </FormControl>
                                 <Button height='2rem' width='6rem' borderRadius='30px' fontFamily='Headings' fontSize='1.25rem' border='none' background='#3a5a40' color='#dad7cd'>Submit</Button>
                             </form>
