@@ -1,0 +1,18 @@
+@use '../../styles/partials/font' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.achievements {
+    background-color: $light-green;
+    font-family: 'Headings';
+    padding: 2rem;
+    color: $darkest-green;
+
+    &__subwrapper {
+        text-align: center;
+    }
+    
+    &__container {
+        margin-bottom: 2rem;
+    }
+}

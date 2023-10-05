@@ -7,6 +7,7 @@ import BirdTracker from './pages/BirdTracker/BirdTracker.js';
 import Birdpage from './pages/Birdpage/Birdpage';
 import Bucketlist from './pages/Bucketlist/Bucketlist';
 import Login from './pages/Login/Login';
+import Achievements from './pages/Achievements/Achievements';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/birdtracker/id' element={<Birdpage/>}/>
         <Route path='/bucketlist' element={<Bucketlist />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/achievements' element={<Achievements />} />
       </Routes>
       <Footer />
     </BrowserRouter>

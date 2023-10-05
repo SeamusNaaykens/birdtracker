@@ -27,10 +27,12 @@ function Homepage() {
                             <h2 className='homepage__heading'>Bucketlist</h2>
                         </div>
                     </Link>
+                    <Link to={'/achievements'} className='homepage__link'>
                     <div className='homepage__container'>
                         <img src={goal} alt='achievements icon' className='homepage__icon' />
                         <h2 className='homepage__heading'>Achievements</h2>
                     </div>
+                    </Link>
                 </div>
                 <Carousel images={birds} />
             </div>
